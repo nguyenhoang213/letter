@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./app.js" defer></script>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+    <title>Helloooo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: rgb(255, 218, 232);
+            font-family: 'Pacifico';
+        }
+        
+        #start {
+            background: white;
+            color: red;
+            border-radius: 15px;
+            padding: 10px 20px;
+            font-size: 25px;
+            font-family: 'Pacifico';
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            border-color: red;
+            box-shadow: 5px 5px black;
+        }
+        
+        #start:hover {
+            color: rgb(255, 255, 255);
+            background-color: rgb(255, 98, 125);
+            border-color: white;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="start" onclick="start()">Nhấn vào đây nè</button>
+    <div id="letgo" class="hidden">
+        <div class="loading">
+            <div class="boxHeartImg">
+                <div class="heartItem item1">
+                    <img src="./image/heart.png" alt="">
+                </div>
+                <div class="heartItem item2">
+                    <img src="./image/heart.png" alt="">
+                </div>
+                <div class="heartItem item3">
+                    <img src="./image/heart.png" alt="">
+                </div>
+            </div>
+            <div class="heartBox">
+                <div class="heart"></div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+                <div class="percent">100%</div>
+            </div>
+            <h2 class="textBox">
+                <span class="textLoad">loading love</span>
+                <span class="cricle1">.</span>
+                <span class="cricle2">.</span>
+                <span class="cricle3">.</span>
+            </h2>
+            <div class="buttonCLick">
+                <img src="./image/cursor.png" alt="">
+                <div class="button">
+                    <p class="textBtn"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function start() {
+        document.getElementById('start').classList.toggle('hidden');
+        document.getElementById('letgo').classList.remove('hidden');
+    }
+</script>
+
+</html>
